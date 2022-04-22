@@ -1,0 +1,98 @@
+:root {
+  --titles-color: #212121;
+  --text-color: #757575;
+  --hover-color: #2196f3;
+  --primary-font-family: 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+[href='./index.html'] {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  /* identical to box height */
+  letter-spacing: 0.03em;
+  color: var(--hover-color);
+}
+/*HEADER*/
+header {
+  font-family: var(--primary-font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.studio-black {
+  color: var(--titles-color);
+}
+.nav,
+.mail-tel {
+  list-style: none;
+}
+.nav > li > a {
+  color: var(--titles-color);
+}
+.mail-tel > li > a {
+  color: var(--text-color);
+}
+.nav > li > a:hover,
+.mail-tel > li > a:hover {
+  color: var(--hover-color);
+}
+/*HEADER*/
+/*FOOTER*/
+footer {
+  background-color: #2f303a;
+}
+.studio-white {
+  color: #ffffff;
+}
+.contacts {
+  list-style: none;
+}
+.contacts > li > a {
+  font-family: var(--primary-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.contacts > li > a:hover {
+  color: #ffffff;
+}
+/*FOOTER*/
+/*HERO*/
+.hero {
+  background-color: #2f303a;
+}
+h1 {
+  font-family: var(--primary-font-family);
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 136%;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 200px 452px;
+}
+.order-button {
+  font-family: var(--primary-font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 188%;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 32px;
+}

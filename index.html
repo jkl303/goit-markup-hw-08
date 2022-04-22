@@ -10,19 +10,48 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/styles.css"
+    />
     <title lang="en">WebStudio</title>
   </head>
   <body>
     <header>
       <nav>
-        <a href=" " lang="en">WebStudio</a>
-        <ul>
-          <li><a href="#studio">Студия</a></li>
-          <li><a href="#portfolio">Портфолио</a></li>
-          <li><a href="#contacts">Контакты</a></li>
+        <a href="./index.html" lang="en"
+          >Web<span class="studio-black"
+            >Studio</span
+          ></a
+        >
+        <ul class="nav">
+          <li>
+            <a href="#studio">Студия</a>
+          </li>
+          <li>
+            <a href="./portfolio.html"
+              >Портфолио</a
+            >
+          </li>
+          <li>
+            <a href="#contacts">Контакты</a>
+          </li>
         </ul>
       </nav>
-      <ul>
+      <ul class="mail-tel">
         <li>
           <a href="mailto:info@devstudio.com"
             >info@devstudio.com</a
@@ -36,9 +65,16 @@
       </ul>
     </header>
     <main>
-      <section>
-        <h1>Эффективные решения для вашего бизнеса</h1>
-        <button type="button">Заказать услугу</button>
+      <section class="hero">
+        <h1>
+          Эффективные решения для вашего бизнеса
+        </h1>
+        <button
+          type="button"
+          class="order-button"
+        >
+          Заказать услугу
+        </button>
       </section>
       <section>
         <h2>Наши преимущества</h2>
@@ -55,16 +91,16 @@
             <h3>Пунктуальность</h3>
             <p>
               Задача организации, в особенности же
-              рамки и место обучения кадров влечет за
-              собой.
+              рамки и место обучения кадров влечет
+              за собой.
             </p>
           </li>
           <li>
             <h3>Планирование</h3>
             <p>
-              Равным образом консультация с широким
-              активом в значительной степени
-              обуславливает.
+              Равным образом консультация с
+              широким активом в значительной
+              степени обуславливает.
             </p>
           </li>
           <li>
@@ -106,7 +142,7 @@
           </li>
         </ul>
       </section>
-      <section id="portfolio">
+      <section>
         <h2>Наша команда</h2>
         <ul>
           <li>
@@ -117,7 +153,9 @@
               height="260"
             />
             <h3>Игорь Демьяненко</h3>
-            <span lang="en">Product Designer</span>
+            <span lang="en"
+              >Product Designer</span
+            >
           </li>
           <li>
             <img
@@ -127,7 +165,9 @@
               height="260"
             />
             <h3>Ольга Репина</h3>
-            <span lang="en">Frontend Developer</span>
+            <span lang="en"
+              >Frontend Developer</span
+            >
           </li>
           <li>
             <img
@@ -153,9 +193,13 @@
       </section>
     </main>
     <footer>
-      <a href=" " lang="en">WebStudio</a>
+      <a href="./index.html" lang="en"
+        >Web<span class="studio-white"
+          >Studio</span
+        ></a
+      >
       <address id="contacts">
-        <ul>
+        <ul class="contacts">
           <li>
             <a
               href="https://goo.gl/maps/BWB1Ba1xbW5cHDxY9"

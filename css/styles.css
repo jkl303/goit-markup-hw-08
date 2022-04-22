@@ -12,14 +12,13 @@ ul {
 }
 body {
   font-family: var(--primary-font-family);
-  font-style: normal;
+  color: var(--titles-color);
 }
 [href='./index.html'] {
   font-family: 'Raleway';
-  font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: 120%;
+  line-height: 1.2;
   /* identical to box height */
   letter-spacing: 0.03em;
   color: var(--hover-color);
@@ -28,18 +27,17 @@ body {
 header {
   font-weight: 500;
   font-size: 14px;
-  line-height: 114%;
+  line-height: 1.14;
   letter-spacing: 0.02em;
 }
 .studio-black {
   color: var(--titles-color);
 }
-
 .nav a {
-  color: var(--titles-color);
+  color: inherit;
 }
 .mail-tel a {
-  color: var(--text-color);
+  color: inherit;
 }
 .nav a:hover,
 .mail-tel a:hover {
@@ -57,9 +55,8 @@ footer {
   list-style: none;
 }
 .contacts a {
-  font-weight: 400;
   font-size: 14px;
-  line-height: 171%;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -74,23 +71,26 @@ footer {
 h1 {
   font-weight: 900;
   font-size: 44px;
-  line-height: 136%;
+  line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
-  padding: 200px 452px;
 }
 .order-button {
   font-weight: 700;
   font-size: 16px;
-  line-height: 188%;
+  line-height: 1.88;
   letter-spacing: 0.06em;
-  color: #ffffff;
-  background: #2196f3;
+  background-color: #f5f4fa;
   border: none;
   border-radius: 4px;
   padding: 10px 32px;
+}
+.order-button:hover {
+  color: #ffffff;
+  background: #2196f3;
+  cursor: pointer;
 }
 /*HERO*/
 /*BENEFITS*/
@@ -104,13 +104,11 @@ h1 {
 }
 .benefits-list h3 {
   font-weight: 700;
-  line-height: 114%;
+  line-height: 1.14;
   text-transform: uppercase;
-  color: var(--titles-color);
 }
 .benefits-list p {
-  font-weight: 400;
-  line-height: 171%;
+  line-height: 1.71;
   color: var(--text-color);
 }
 /*BENEFITS*/
@@ -121,10 +119,9 @@ h1 {
 #studio h2 {
   font-weight: 700;
   font-size: 36px;
-  line-height: 116%;
+  line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--titles-color);
 }
 /*SUDIO*/
 /*TEAM*/
@@ -134,24 +131,21 @@ h1 {
 .team h2 {
   font-weight: 700;
   font-size: 36px;
-  line-height: 116%;
+  line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--titles-color);
 }
 .team-list h3 {
   font-weight: 500;
   font-size: 16px;
-  line-height: 119%;
+  line-height: 1.19;
   /* identical to box height */
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--titles-color);
 }
 .team-list p {
-  font-weight: 400;
   font-size: 16px;
-  line-height: 119%;
+  line-height: 1.19;
   /* identical to box height */
   text-align: center;
   letter-spacing: 0.03em;
@@ -162,10 +156,9 @@ h1 {
 .buttons button {
   font-weight: 500;
   font-size: 16px;
-  line-height: 162%;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--titles-color);
   background-color: #f5f4fa;
   padding: 6px 22px;
   border: none;
@@ -174,6 +167,7 @@ h1 {
 .buttons button:hover {
   color: #ffffff;
   background-color: var(--hover-color);
+  cursor: pointer;
 }
 .works {
   background-color: #e5e5e5;
@@ -181,14 +175,12 @@ h1 {
 .works h2 {
   font-weight: 700;
   font-size: 18px;
-  line-height: 200%;
+  line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--titles-color);
 }
 .works p {
-  font-weight: 400;
   font-size: 16px;
-  line-height: 188%;
+  line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--text-color);
 }

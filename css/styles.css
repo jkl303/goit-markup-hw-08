@@ -7,40 +7,42 @@
 a {
   text-decoration: none;
 }
+ul {
+  list-style: none;
+}
+body {
+  font-family: var(--primary-font-family);
+  font-style: normal;
+}
 [href='./index.html'] {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.2;
+  line-height: 120%;
   /* identical to box height */
   letter-spacing: 0.03em;
   color: var(--hover-color);
 }
 /*HEADER*/
 header {
-  font-family: var(--primary-font-family);
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 114%;
   letter-spacing: 0.02em;
 }
 .studio-black {
   color: var(--titles-color);
 }
-.nav,
-.mail-tel {
-  list-style: none;
-}
-.nav > li > a {
+
+.nav a {
   color: var(--titles-color);
 }
-.mail-tel > li > a {
+.mail-tel a {
   color: var(--text-color);
 }
-.nav > li > a:hover,
-.mail-tel > li > a:hover {
+.nav a:hover,
+.mail-tel a:hover {
   color: var(--hover-color);
 }
 /*HEADER*/
@@ -54,16 +56,14 @@ footer {
 .contacts {
   list-style: none;
 }
-.contacts > li > a {
-  font-family: var(--primary-font-family);
-  font-style: normal;
+.contacts a {
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 171%;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-.contacts > li > a:hover {
+.contacts a:hover {
   color: #ffffff;
 }
 /*FOOTER*/
@@ -72,8 +72,6 @@ footer {
   background-color: #2f303a;
 }
 h1 {
-  font-family: var(--primary-font-family);
-  font-style: normal;
   font-weight: 900;
   font-size: 44px;
   line-height: 136%;
@@ -84,15 +82,114 @@ h1 {
   padding: 200px 452px;
 }
 .order-button {
-  font-family: var(--primary-font-family);
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 188%;
   letter-spacing: 0.06em;
   color: #ffffff;
   background: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
   border-radius: 4px;
   padding: 10px 32px;
 }
+/*HERO*/
+/*BENEFITS*/
+.benefits {
+  background-color: #e5e5e5;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+.benefits h2 {
+  display: none;
+}
+.benefits-list h3 {
+  font-weight: 700;
+  line-height: 114%;
+  text-transform: uppercase;
+  color: var(--titles-color);
+}
+.benefits-list p {
+  font-weight: 400;
+  line-height: 171%;
+  color: var(--text-color);
+}
+/*BENEFITS*/
+/*SUDIO*/
+#studio {
+  background-color: #e5e5e5;
+}
+#studio h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 116%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--titles-color);
+}
+/*SUDIO*/
+/*TEAM*/
+.team {
+  background-color: #f5f4fa;
+}
+.team h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 116%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--titles-color);
+}
+.team-list h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 119%;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--titles-color);
+}
+.team-list p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 119%;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+/*TEAM*/
+/*PORTFOLIO*/
+.buttons button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 162%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--titles-color);
+  background-color: #f5f4fa;
+  padding: 6px 22px;
+  border: none;
+  border-radius: 4px;
+}
+.buttons button:hover {
+  color: #ffffff;
+  background-color: var(--hover-color);
+}
+.works {
+  background-color: #e5e5e5;
+}
+.works h2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 200%;
+  letter-spacing: 0.06em;
+  color: var(--titles-color);
+}
+.works p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 188%;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+/*PORTFOLIO*/

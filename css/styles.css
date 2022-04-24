@@ -19,6 +19,16 @@ body {
   color: var(--hover-color);
   text-decoration: none;
 }
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+title {
+  color: var(--hover-color);
+}
 /*HEADER*/
 header {
   font-weight: 500;
@@ -38,13 +48,16 @@ header {
   text-decoration: none;
 }
 .mail-tel a {
-  color: inherit;
+  color: var(--text-color);
   text-decoration: none;
 }
 .nav a:hover,
 .mail-tel a:hover,
 .nav a:focus,
 .mail-tel a:focus {
+  color: var(--hover-color);
+}
+#portfolio-nav {
   color: var(--hover-color);
 }
 /*HEADER*/
@@ -59,14 +72,16 @@ footer {
   list-style: none;
 }
 .contacts a {
+  font-family: var(--primary-font-family);
+  font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
 }
-.contacts a:hover,
-.contacts a:focus {
+
+#address {
   color: #ffffff;
 }
 /*FOOTER*/
@@ -74,7 +89,7 @@ footer {
 .hero {
   background-color: #2f303a;
 }
-h1 {
+.hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -103,7 +118,6 @@ h1 {
 /*BENEFITS*/
 .benefits {
   background-color: #e5e5e5;
-  font-size: 14px;
   letter-spacing: 0.03em;
 }
 .benefits ul {
@@ -114,10 +128,12 @@ h1 {
 }
 .benefits-list h3 {
   font-weight: 700;
+  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
 .benefits-list p {
+  font-size: 14px;
   line-height: 1.71;
   color: var(--text-color);
 }
@@ -129,24 +145,10 @@ h1 {
 #studio ul {
   list-style: none;
 }
-#studio h2 {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
 /*SUDIO*/
 /*TEAM*/
 .team {
   background-color: #f5f4fa;
-}
-.team h2 {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
 }
 .team-list {
   list-style: none;
@@ -169,6 +171,9 @@ h1 {
 }
 /*TEAM*/
 /*PORTFOLIO*/
+.portfolio-title {
+  display: none;
+}
 .buttons {
   list-style: none;
 }
@@ -182,6 +187,10 @@ h1 {
   padding: 6px 22px;
   border: none;
   border-radius: 4px;
+}
+#all-button {
+  color: #ffffff;
+  background-color: var(--hover-color);
 }
 .buttons button:hover {
   color: #ffffff;

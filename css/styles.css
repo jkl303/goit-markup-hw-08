@@ -57,7 +57,7 @@ header {
 .mail-tel a:focus {
   color: var(--hover-color);
 }
-#portfolio-nav {
+#current {
   color: var(--hover-color);
 }
 /*HEADER*/

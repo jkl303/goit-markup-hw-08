@@ -309,6 +309,7 @@ footer {
 .works-item {
   margin-right: 30px;
   margin-bottom: 30px;
+  border-bottom: 1px solid #eeeeee;
 }
 .works-item:nth-child(3n + 3) {
   margin-right: 0;

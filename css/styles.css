@@ -11,8 +11,15 @@ body {
 .container {
   padding: 94px 0px;
 }
-h2 {
+p,
+h1,
+h2,
+h3 {
   margin: 0;
+}
+ul {
+  margin: 0;
+  padding-left: 0;
 }
 [href='./index.html'] {
   font-family: 'Raleway';
@@ -72,8 +79,6 @@ nav {
 .nav,
 .mail-tel {
   display: flex;
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 .item {
@@ -117,8 +122,6 @@ nav {
 .contacts {
   list-style: none;
   display: block;
-  margin: 0;
-  padding: 0;
 }
 .contacts li {
   margin-bottom: 9px;
@@ -182,8 +185,6 @@ nav {
 }
 .benefits-list {
   display: flex;
-  margin: 0;
-  padding: 0;
   justify-content: center;
   list-style: none;
 }
@@ -195,14 +196,13 @@ nav {
   margin-right: 0;
 }
 .benefits-list h3 {
-  margin: 0 0 10px;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
 .benefits-list p {
-  margin: 0;
   font-size: 14px;
   line-height: 1.71;
   color: var(--text-color);
@@ -215,7 +215,7 @@ nav {
 .studio-list {
   display: flex;
   justify-content: center;
-  margin: 50px 0 0;
+  margin-top: 50px;
   list-style: none;
 }
 .studio-item {
@@ -232,8 +232,7 @@ nav {
 .team-list {
   display: flex;
   justify-content: center;
-  margin: 50px 0 0;
-  padding: 0;
+  margin-top: 50px;
   list-style: none;
 }
 .team-item {
@@ -249,7 +248,6 @@ nav {
   padding: 30px 0;
 }
 .team-list h3 {
-  margin: 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -258,7 +256,7 @@ nav {
   letter-spacing: 0.03em;
 }
 .team-list p {
-  margin: 10px 0 0;
+  margin-top: 10px;
   font-size: 16px;
   line-height: 1.19;
   /* identical to box height */
@@ -277,9 +275,7 @@ nav {
 .buttons {
   display: flex;
   justify-content: center;
-  margin: 0;
   margin-bottom: 50px;
-  padding: 0;
   list-style: none;
 }
 .button {
@@ -312,8 +308,6 @@ nav {
 .works {
   display: flex;
   justify-content: center;
-  margin: 0;
-  padding: 0;
   flex-wrap: wrap;
   list-style: none;
 }
@@ -338,7 +332,6 @@ nav {
   letter-spacing: 0.06em;
 }
 .works p {
-  margin: 0;
   margin-top: 4px;
   font-size: 16px;
   line-height: 1.88;

@@ -59,11 +59,11 @@ title {
 /*HEADER*/
 header {
   padding: 24px 0 25px;
+  border-bottom: 1px solid #ececec;
 }
 .flex-nav {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #ececec;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -301,7 +301,6 @@ footer {
 .works-item {
   margin-right: var(--typical-margin);
   margin-bottom: var(--typical-margin);
-  border-bottom: 1px solid #eeeeee;
 }
 .works-item:nth-child(3n + 3) {
   margin-right: 0;
@@ -311,6 +310,7 @@ footer {
 }
 .works div {
   padding: 20px 24px;
+  border: 1px solid #eeeeee;
 }
 .works h2 {
   margin-bottom: 4px;

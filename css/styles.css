@@ -1,6 +1,8 @@
 :root {
   --titles-color: #212121;
   --text-color: #757575;
+  --svg-color: #afb1b8;
+  --another-text-color: #fff;
   --hover-color: #2196f3;
   --primary-font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   --typical-margin: 30px;
@@ -23,6 +25,7 @@ h3 {
 ul {
   margin: 0;
   padding-left: 0;
+  list-style: none;
 }
 [href='./index.html'] {
   font-family: 'Raleway';
@@ -82,10 +85,7 @@ nav {
 .nav,
 .mail-tel {
   display: flex;
-  list-style: none;
-}
-.item {
-  align-self: center;
+  align-items: center;
 }
 .item:not(:last-child) {
   margin-right: 50px;
@@ -94,8 +94,13 @@ nav {
   color: inherit;
   text-decoration: none;
 }
+.mail-tel svg {
+  vertical-align: top;
+  margin-right: 6px;
+}
 .mail-tel a {
   color: var(--text-color);
+  fill: var(--text-color);
   text-decoration: none;
 }
 .nav a:hover,
@@ -103,6 +108,7 @@ nav {
 .nav a:focus,
 .mail-tel a:focus {
   color: var(--hover-color);
+  fill: var(--hover-color);
 }
 
 #current {
@@ -114,15 +120,15 @@ footer {
   padding: 60px 0;
   background-color: #2f303a;
 }
+footer > div {
+  display: flex;
+}
 .foot-logo {
   display: inline-block;
   margin-bottom: 20px;
 }
 .studio-white {
-  color: #ffffff;
-}
-.contacts {
-  list-style: none;
+  color: var(--another-text-color);
 }
 .contacts li {
   margin-bottom: 9px;
@@ -140,11 +146,52 @@ footer {
   color: rgba(255, 255, 255, 0.6);
 }
 #address {
-  color: #ffffff;
+  color: var(--another-text-color);
+}
+.join {
+  margin-left: 70px;
+}
+.join-title {
+  margin-bottom: 20px;
+  color: var(--another-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
+.foot-socials {
+  display: flex;
+  justify-content: center;
+}
+.foot-socials li:not(:last-child) {
+  margin-right: 10px;
+}
+.foot-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  fill: var(--another-text-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.foot-socials a:hover,
+.foot-socials a:focus {
+  background-color: var(--hover-color);
 }
 /*FOOTER*/
 /*HERO*/
 .hero {
+  margin: 0 auto;
+  max-width: 1600px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   background-color: #2f303a;
   padding: 200px 0;
 }
@@ -157,7 +204,7 @@ footer {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--another-text-color);
 }
 .hero-button {
   display: block;
@@ -171,7 +218,7 @@ footer {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  color: #ffffff;
+  color: var(--another-text-color);
   background-color: var(--hover-color);
 }
 .hero-button:hover,
@@ -186,13 +233,19 @@ footer {
 }
 .benefits-list {
   display: flex;
-  list-style: none;
 }
 .benefits-item {
   flex-basis: 270px;
 }
 .benefits-item:not(:last-child) {
   margin-right: var(--typical-margin);
+}
+.benefits-item div {
+  display: flex;
+  height: 120px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
 }
 .benefits-list h3 {
   margin-bottom: 10px;
@@ -214,7 +267,6 @@ footer {
 .studio-list {
   display: flex;
   margin-top: 50px;
-  list-style: none;
 }
 .studio-item:not(:last-child) {
   margin-right: var(--typical-margin);
@@ -228,7 +280,6 @@ footer {
 .team-list {
   display: flex;
   margin-top: 50px;
-  list-style: none;
 }
 .team-item {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -252,8 +303,71 @@ footer {
 }
 .team-list p {
   color: var(--text-color);
+  margin-bottom: 16px;
+}
+.socials {
+  display: flex;
+  justify-content: center;
+}
+.socials li:not(:last-child) {
+  margin-right: 10px;
+}
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  fill: var(--svg-color);
+  background-color: var(--another-text-color);
+}
+.socials a:hover,
+.socials a:focus {
+  fill: var(--another-text-color);
+  background-color: var(--hover-color);
 }
 /*TEAM*/
+/* COMPANIES */
+.companies {
+  padding: 94px 0;
+}
+.companies-title {
+  margin-bottom: 50px;
+  color: var(--titles-color);
+  font-family: var(--primary-font-family);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+.companies-list {
+  display: flex;
+  justify-content: center;
+}
+.companies-list li {
+  width: 170px;
+  height: 92px;
+}
+.companies-list li:not(:last-child) {
+  margin-right: var(--typical-margin);
+}
+.companies-list a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  fill: var(--svg-color);
+}
+.companies-list a:hover,
+.companies-list a:focus {
+  fill: var(--hover-color);
+  border-color: var(--hover-color);
+}
+/* COMPANIES */
 
 /*PORTFOLIO*/
 .portfolio {
@@ -265,7 +379,6 @@ footer {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-  list-style: none;
 }
 .button:not(:last-child) {
   margin-right: 8px;
@@ -283,24 +396,31 @@ footer {
   background-color: #f5f4fa;
 }
 #current-button {
-  color: #ffffff;
+  color: var(--another-text-color);
   background-color: var(--hover-color);
 }
 .buttons button:hover {
-  color: #ffffff;
+  color: var(--another-text-color);
   background-color: var(--hover-color);
   cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /*BUTTONS*/
 /*WORKS*/
 .works {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
 }
 .works-item {
   margin-right: var(--typical-margin);
   margin-bottom: var(--typical-margin);
+}
+.works-item:hover,
+.works-item:focus {
+  cursor: pointer;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .works-item:nth-child(3n + 3) {
   margin-right: 0;

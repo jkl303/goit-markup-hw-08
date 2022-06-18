@@ -18,12 +18,12 @@
     <header>
       <div class="container flex-nav">
         <nav>
-          <a href="./index.html" lang="en" class="head-logo"
+          <a href="./index.html" lang="en" class="head-logo logo"
             >Web<span class="studio-black">Studio</span></a
           >
           <ul class="nav">
-            <li class="item">
-              <a href="#studio">Студия</a>
+            <li class="item" id="current">
+              <a href="./index.html">Студия</a>
             </li>
             <li class="item">
               <a href="./portfolio.html">Портфолио</a>
@@ -57,7 +57,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="hero-button">Заказать услугу</button>
+          <button type="button" class="hero-button" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </section>
       <section class="benefits">
@@ -126,6 +128,7 @@
                 width="370"
                 height="294"
               />
+              <h3 class="cover-text">Десктопные приложения</h3>
             </li>
             <li class="studio-item">
               <img
@@ -134,6 +137,7 @@
                 width="370"
                 height="294"
               />
+              <h3 class="cover-text">Мобильные приложения</h3>
             </li>
             <li class="studio-item">
               <img
@@ -142,6 +146,7 @@
                 width="370"
                 height="294"
               />
+              <h3 class="cover-text">Дизайнерские решения</h3>
             </li>
           </ul>
         </div>
@@ -374,7 +379,7 @@
     <footer>
       <div class="container">
         <div>
-          <a href="./index.html" lang="en" class="foot-logo"
+          <a href="./index.html" lang="en" class="foot-logo logo"
             >Web<span class="studio-white">Studio</span></a
           >
           <address id="contacts">
@@ -432,5 +437,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" data-modal-close>
+          <svg width="11" height="11">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

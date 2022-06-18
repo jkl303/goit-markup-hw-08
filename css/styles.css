@@ -6,6 +6,7 @@
   --hover-color: #2196f3;
   --primary-font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   --typical-margin: 30px;
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   font-family: var(--primary-font-family);
@@ -27,7 +28,7 @@ ul {
   padding-left: 0;
   list-style: none;
 }
-[href='./index.html'] {
+.logo {
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
@@ -59,9 +60,56 @@ title {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.modal {
+  position: absolute;
+  width: 528px;
+  min-height: 581px;
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--cubic);
+}
+.modal button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  transition: fill 250ms var(--cubic), background-color 250ms var(--cubic);
+}
+.modal button:hover {
+  cursor: pointer;
+  fill: var(--another-text-color);
+  background-color: var(--hover-color);
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  position: none;
+}
 /*HEADER*/
 header {
-  padding: 24px 0 25px;
   border-bottom: 1px solid #ececec;
 }
 .flex-nav {
@@ -73,6 +121,7 @@ header {
   letter-spacing: 0.02em;
 }
 .head-logo {
+  padding: 24px 0;
   margin-right: 93px;
 }
 .studio-black {
@@ -90,9 +139,15 @@ nav {
 .item:not(:last-child) {
   margin-right: 50px;
 }
+.nav a,
+.mail-tel a {
+  display: block;
+  padding: 32px 0 31px;
+  text-decoration: none;
+  transition: color 250ms var(--cubic), fill 250ms var(--cubic);
+}
 .nav a {
   color: inherit;
-  text-decoration: none;
 }
 .mail-tel svg {
   vertical-align: top;
@@ -101,7 +156,6 @@ nav {
 .mail-tel a {
   color: var(--text-color);
   fill: var(--text-color);
-  text-decoration: none;
 }
 .nav a:hover,
 .mail-tel a:hover,
@@ -112,7 +166,18 @@ nav {
 }
 
 #current {
+  position: relative;
   color: var(--hover-color);
+}
+#current::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
 }
 /*HEADER*/
 /*FOOTER*/
@@ -175,6 +240,7 @@ footer > div {
   border-radius: 50px;
   fill: var(--another-text-color);
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms var(--cubic);
 }
 .foot-socials a:hover,
 .foot-socials a:focus {
@@ -272,6 +338,23 @@ footer > div {
 .studio-item:not(:last-child) {
   margin-right: var(--typical-margin);
 }
+.studio-item {
+  position: relative;
+  height: 294px;
+}
+.cover-text {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 27px 0;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--another-text-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
 /*STUDIO*/
 /*TEAM*/
 .team {
@@ -323,6 +406,7 @@ footer > div {
   border-radius: 50px;
   fill: var(--svg-color);
   background-color: var(--another-text-color);
+  transition: fill 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 .socials a:hover,
 .socials a:focus {
@@ -363,6 +447,7 @@ footer > div {
   align-items: center;
   justify-content: center;
   fill: var(--svg-color);
+  transition: fill 250ms var(--cubic), border-color 250ms var(--cubic);
 }
 .companies-list a:hover,
 .companies-list a:focus {
@@ -396,6 +481,8 @@ footer > div {
   text-align: center;
   letter-spacing: 0.03em;
   background-color: #f5f4fa;
+  transition: fill 250ms var(--cubic), background-color 250ms var(--cubic),
+    box-shadow 250ms var(--cubic);
 }
 #current-button {
   color: var(--another-text-color);
@@ -417,6 +504,7 @@ footer > div {
 .works-item {
   margin-right: var(--typical-margin);
   margin-bottom: var(--typical-margin);
+  transition: box-shadow 250ms var(--cubic);
 }
 .works-item:hover,
 .works-item:focus {
@@ -424,13 +512,33 @@ footer > div {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.works-item:hover .riding-text,
+.works-item:focus .riding-text {
+  transform: translateY(-100%);
+}
 .works-item:nth-child(3n + 3) {
   margin-right: 0;
 }
 .works-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
-.works div {
+.thumb {
+  position: relative;
+  overflow: hidden;
+}
+.riding-text {
+  position: absolute;
+  width: 100%;
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--another-text-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  transition: transform 250ms var(--cubic);
+}
+.works-titles {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
 }
@@ -441,7 +549,7 @@ footer > div {
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.works p {
+.works-p {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;

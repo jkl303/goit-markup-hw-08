@@ -1,0 +1,44 @@
+.companies {
+    padding: 94px 0;
+}
+
+.companies-title {
+    margin-bottom: 50px;
+    color: map-get($colors, 'titles');
+    font-family: $primary-font-family;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+
+.companies-list {
+    display: flex;
+    justify-content: center;
+}
+
+.companies-list li {
+    width: 170px;
+    height: 92px;
+}
+
+.companies-list li:not(:last-child) {
+    margin-right: $typical-margin;
+}
+
+.companies-list a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    fill: map-get($colors, 'svg');
+    transition: fill 250ms $cubic, border-color 250ms $cubic;
+}
+
+.companies-list a:hover,
+.companies-list a:focus {
+    fill: map-get($colors, 'hover');
+    border-color: map-get($colors, 'hover');}

@@ -1,0 +1,77 @@
+header {
+    border-bottom: 1px solid #ececec;
+}
+
+.flex-nav {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.head-logo {
+    padding: 24px 0;
+    margin-right: 93px;
+}
+
+.studio-black {
+    color: map-get($colors, 'titles');
+}
+
+nav {
+    display: flex;
+    margin: 0;
+}
+
+.nav,
+.mail-tel {
+    display: flex;
+    align-items: center;
+}
+
+.item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.nav a,
+.mail-tel a {
+    display: block;
+    padding: 32px 0 31px;
+    text-decoration: none;
+    transition: color 250ms $cubic, fill 250ms $cubic;
+    &:hover, &:focus {
+            color: map-get($colors, 'hover');
+            fill: map-get($colors, 'hover');
+        }
+}
+
+.nav a {
+    color: inherit;
+}
+
+
+.mail-tel a {
+    color: map-get($colors, 'text');
+    fill: map-get($colors, 'text');
+& svg {
+        vertical-align: top;
+        margin-right: 6px;
+    }
+}
+
+#current {
+    position: relative;
+    color: map-get($colors, 'hover');
+    &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background: #2196f3;
+    border-radius: 2px;
+}
+}

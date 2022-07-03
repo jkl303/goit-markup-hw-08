@@ -6,8 +6,6 @@ footer {
 }
 }
 
-footer
-
 .foot-logo {
     display: inline-block;
     margin-bottom: 20px;
@@ -40,9 +38,7 @@ footer
 
 .join {
     margin-left: 70px;
-}
-
-.join-title {
+    &-title {
     margin-bottom: 20px;
     color: map-get($colors, 'another-text');
     font-weight: 700;
@@ -50,31 +46,13 @@ footer
     line-height: 1.14;
     letter-spacing: 0.03em;
 }
-
-.foot-socials {
-    display: flex;
-    justify-content: center;
 }
 
-.foot-socials li:not(:last-child) {
-    margin-right: 10px;
-}
-
-.foot-socials a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50px;
-    fill: map-get($colors, 'another-text');
+.foot-socials { @extend .socials;
+    & a {fill: map-get($colors, 'another-text');
     background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color 250ms $cubic;
 }
-
-.foot-socials a:hover,
-.foot-socials a:focus {
-    background-color: map-get($colors, 'hover');}
+}
 
 .email-label {
     display: block;
@@ -96,26 +74,23 @@ footer
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: #2f303a;
-}
-
-#foot-email::placeholder {
+    &::placeholder {
     color: rgba(255, 255, 255, 0.6);
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
 }
+}
 
 .foot-form {
     margin-left: auto;
-}
-
-.foot-form .hero-button {
+    & .hero-button {
     display: inline;
     margin: 0;
     fill: map-get($colors, 'another-text');
-}
-
-.foot-form svg {
+    }
+    &  svg {
     vertical-align: middle;
     margin-left: 10px;
+}
 }

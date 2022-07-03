@@ -1,19 +1,16 @@
 .studio {
     padding-bottom: 94px;
-}
-
-.studio-list {
+    &-list {
     display: flex;
     margin-top: 50px;
 }
-
-.studio-item:not(:last-child) {
-    margin-right: $typical-margin;
-}
-
-.studio-item {
+    &-item {
     position: relative;
     height: 294px;
+        &:not(:last-child) {
+        margin-right: $typical-margin;
+}
+}
 }
 
 .cover-text {

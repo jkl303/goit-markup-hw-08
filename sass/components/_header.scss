@@ -1,4 +1,4 @@
-header {
+.header {
     border-bottom: 1px solid #ececec;
 }
 
@@ -14,6 +14,7 @@ header {
 .head-logo {
     padding: 24px 0;
     margin-right: 93px;
+    color: map-get($colors, 'hover');
 }
 
 .studio-black {
@@ -35,27 +36,23 @@ nav {
     margin-right: 50px;
 }
 
-.nav a,
-.mail-tel a {
+.nav-link {
     display: block;
     padding: 32px 0 31px;
     text-decoration: none;
-    transition: color 250ms $cubic, fill 250ms $cubic;
+    color: inherit;
+    @include transition(color);
+    & svg {@include transition(fill);}
     &:hover, &:focus {
             color: map-get($colors, 'hover');
             fill: map-get($colors, 'hover');
         }
 }
 
-.nav a {
-    color: inherit;
-}
-
-
-.mail-tel a {
+.mail-tel a { @extend .nav-link;
     color: map-get($colors, 'text');
     fill: map-get($colors, 'text');
-& svg {
+    & svg {
         vertical-align: top;
         margin-right: 6px;
     }

@@ -8,9 +8,7 @@
     background-repeat: no-repeat;
     background-color: #2f303a;
     padding: 200px 0;
-}
-
-.hero-title {
+    &-title {
     width: 696px;
     margin: 0 auto 30px;
     font-weight: 900;
@@ -19,10 +17,8 @@
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: map-get($colors, 'another-text');
-}
-
-.hero-button {
+    color: map-get($colors, 'another-text');}
+    &-button {
     display: block;
     min-width: 200px;
     height: 50px;
@@ -36,9 +32,8 @@
     letter-spacing: 0.06em;
     color: map-get($colors, 'another-text');
     background-color: map-get($colors, 'hover');
-}
-
-.hero-button:hover,
-.hero-button:focus {
+    &:hover, &:focus {
     cursor: pointer;
 }
+}
+    }

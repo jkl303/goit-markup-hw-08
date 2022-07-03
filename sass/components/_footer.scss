@@ -1,28 +1,20 @@
-footer {
+.footer {
     padding: 60px 0;
     background-color: #2f303a;
     &>div {
     display: flex;
 }
-}
-
-.foot-logo {
+    &__logo {
     display: inline-block;
     margin-bottom: 20px;
 }
-
-.studio-white {
-    color: map-get($colors, 'another-text');
-}
-
-.contacts li {
+    &__item {
     margin-bottom: 9px;
     &:last-child {
     margin-bottom: 0;
 }
 }
-
-.contacts a {
+    &__link {
     font-family: $primary-font-family;
     font-style: normal;
     font-size: 14px;
@@ -30,15 +22,19 @@ footer {
     letter-spacing: 0.03em;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
+        &--white {
+        color: map-get($colors, 'another-text');
+}
+}
 }
 
-#address {
+.logo__span--white {
     color: map-get($colors, 'another-text');
 }
 
 .join {
     margin-left: 70px;
-    &-title {
+    &__title {
     margin-bottom: 20px;
     color: map-get($colors, 'another-text');
     font-weight: 700;
@@ -48,23 +44,11 @@ footer {
 }
 }
 
-.foot-socials { @extend .socials;
-    & a {fill: map-get($colors, 'another-text');
+.socials__link--white {fill: map-get($colors, 'another-text');
     background-color: rgba(255, 255, 255, 0.1);
 }
-}
 
-.email-label {
-    display: block;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: map-get($colors, 'another-text');
-}
-
-#foot-email {
+.email-form__input {
     width: 358px;
     height: 50px;
     margin: 20px 12px 0 0;
@@ -82,14 +66,22 @@ footer {
 }
 }
 
-.foot-form {
+.email-form {
     margin-left: auto;
-    & .hero-button {
+    &__label {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: map-get($colors, 'another-text');
+    }
+    &__btn {
     display: inline;
     margin: 0;
-    fill: map-get($colors, 'another-text');
     }
-    &  svg {
+    &__svg {fill: map-get($colors, 'another-text');
     vertical-align: middle;
     margin-left: 10px;
 }

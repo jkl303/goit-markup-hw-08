@@ -1,64 +1,63 @@
 .header {
     border-bottom: 1px solid #ececec;
-}
-
-.flex-nav {
-    display: flex;
-    justify-content: space-between;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
 
-.head-logo {
+.container--flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    margin: 0;
+    &__logo {
     padding: 24px 0;
     margin-right: 93px;
     color: map-get($colors, 'hover');
 }
-
-.studio-black {
-    color: map-get($colors, 'titles');
-}
-
-nav {
-    display: flex;
-    margin: 0;
-}
-
-.nav,
-.mail-tel {
+    &__list {
     display: flex;
     align-items: center;
 }
-
-.item:not(:last-child) {
-    margin-right: 50px;
-}
-
-.nav-link {
+    &__link {
     display: block;
     padding: 32px 0 31px;
     text-decoration: none;
     color: inherit;
     @include transition(color);
-    & svg {@include transition(fill);}
     &:hover, &:focus {
             color: map-get($colors, 'hover');
             fill: map-get($colors, 'hover');
         }
 }
+}
 
-.mail-tel a { @extend .nav-link;
+.logo__span--black {
+    color: map-get($colors, 'titles');
+}
+
+.mail-tel {@extend .nav__list;
+    &__link { @extend .nav__link;
     color: map-get($colors, 'text');
     fill: map-get($colors, 'text');
-    & svg {
-        vertical-align: top;
+    }
+    &__svg {vertical-align: top;
         margin-right: 6px;
+        @include transition(fill);
     }
 }
 
-#current {
+.nav__item, .mail-tel__item {
+&:not(:last-child) {
+    margin-right: 50px;
+}
+}
+
+.nav__item--current {
     position: relative;
     color: map-get($colors, 'hover');
     &::after {

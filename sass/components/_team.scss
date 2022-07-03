@@ -1,11 +1,11 @@
 .team {
     padding: 94px 0;
     background-color: #f5f4fa;
-    &-list {
+    &__list {
     display: flex;
     margin-top: 50px;
 }
-    &-item {
+    &__item {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -14,18 +14,18 @@
     margin-right: $typical-margin;
 }
 }
-    & div {
+    &__div {
     padding: 30px 0;
     text-align: center;
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
 }
-    & h3 {
+    &__title {
     font-weight: 500;
     margin-bottom: 10px;
 }
-    &  p {
+    &__text {
     color: map-get($colors, 'text');
     margin-bottom: 16px;
 }
@@ -34,10 +34,10 @@
 .socials {
     display: flex;
     justify-content: center;
-    & li:not(:last-child) {
+    &__item:not(:last-child) {
     margin-right: 10px;
 }
-    & a {
+    &__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,8 +46,7 @@
     border-radius: 50px;
     fill: map-get($colors, 'svg');
     background-color: map-get($colors, 'another-text');
-    @include transition(background-color);
-        & svg {@include transition(fill);}
+    transition: fill 250ms $cubic, background-color 250ms $cubic;
         &:hover,
         &:focus {
         fill: map-get($colors, 'another-text');

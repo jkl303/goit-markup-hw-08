@@ -41,6 +41,23 @@ ul {
   letter-spacing: 0.03em;
 }
 
+.big-btn {
+  min-width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background-color: #2196f3;
+}
+.big-btn:hover, .big-btn:focus {
+  cursor: pointer;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -60,71 +77,65 @@ ul {
 
 .header {
   border-bottom: 1px solid #ececec;
-}
-
-.flex-nav {
-  display: flex;
-  justify-content: space-between;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
-.head-logo {
+.container--flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  margin: 0;
+}
+.nav__logo {
   padding: 24px 0;
   margin-right: 93px;
   color: #2196f3;
 }
-
-.studio-black {
-  color: #212121;
-}
-
-nav {
-  display: flex;
-  margin: 0;
-}
-
-.nav,
-.mail-tel {
+.nav__list, .mail-tel {
   display: flex;
   align-items: center;
 }
-
-.item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.nav-link, .mail-tel a {
+.nav__link, .mail-tel__link {
   display: block;
   padding: 32px 0 31px;
   text-decoration: none;
   color: inherit;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-link svg, .mail-tel a svg {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.nav-link:hover, .mail-tel a:hover, .nav-link:focus, .mail-tel a:focus {
+.nav__link:hover, .mail-tel__link:hover, .nav__link:focus, .mail-tel__link:focus {
   color: #2196f3;
   fill: #2196f3;
 }
 
-.mail-tel a {
+.logo__span--black {
+  color: #212121;
+}
+
+.mail-tel__link {
   color: #757575;
   fill: #757575;
 }
-.mail-tel a svg {
+.mail-tel__svg {
   vertical-align: top;
   margin-right: 6px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#current {
+.nav__item:not(:last-child), .mail-tel__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav__item--current {
   position: relative;
   color: #2196f3;
 }
-#current::after {
+.nav__item--current::after {
   content: "";
   position: absolute;
   left: 0;
@@ -144,7 +155,7 @@ nav {
   background-color: #2f303a;
   padding: 200px 0;
 }
-.hero-title {
+.hero__title {
   width: 696px;
   margin: 0 auto 30px;
   font-weight: 900;
@@ -155,36 +166,25 @@ nav {
   text-transform: uppercase;
   color: #fff;
 }
-.hero-button {
+.hero__btn {
   display: block;
-  min-width: 200px;
-  height: 50px;
   margin: 0 auto;
-  border: none;
-  border-radius: 4px;
-  font-family: "Roboto", "Helvetica Neue", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: #fff;
-  background-color: #2196f3;
-}
-.hero-button:hover, .hero-button:focus {
-  cursor: pointer;
 }
 
 .benefits {
   letter-spacing: 0.03em;
   padding: 94px 0;
 }
-.benefits-list {
+.benefits__list {
   display: flex;
 }
-.benefits-item {
+.benefits__item {
   flex-basis: 270px;
 }
-.benefits-item div {
+.benefits__item:not(:last-child) {
+  margin-right: 30px;
+}
+.benefits__div {
   display: flex;
   height: 120px;
   margin-bottom: 30px;
@@ -192,17 +192,14 @@ nav {
   justify-content: center;
   background-color: #f5f4fa;
 }
-.benefits-item:not(:last-child) {
-  margin-right: 30px;
-}
-.benefits-list h3 {
+.benefits__title {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
-.benefits-list p {
+.benefits__text {
   font-size: 14px;
   line-height: 1.71;
   color: #757575;
@@ -211,19 +208,18 @@ nav {
 .studio {
   padding-bottom: 94px;
 }
-.studio-list {
+.studio__list {
   display: flex;
   margin-top: 50px;
 }
-.studio-item {
+.studio__item {
   position: relative;
   height: 294px;
 }
-.studio-item:not(:last-child) {
+.studio__item:not(:last-child) {
   margin-right: 30px;
 }
-
-.cover-text {
+.studio__cover-text {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -241,42 +237,42 @@ nav {
   padding: 94px 0;
   background-color: #f5f4fa;
 }
-.team-list {
+.team__list {
   display: flex;
   margin-top: 50px;
 }
-.team-item {
+.team__item {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: #fff;
 }
-.team-item:not(:last-child) {
+.team__item:not(:last-child) {
   margin-right: 30px;
 }
-.team div {
+.team__div {
   padding: 30px 0;
   text-align: center;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
-.team h3 {
+.team__title {
   font-weight: 500;
   margin-bottom: 10px;
 }
-.team p {
+.team__text {
   color: #757575;
   margin-bottom: 16px;
 }
 
-.socials, .foot-socials {
+.socials {
   display: flex;
   justify-content: center;
 }
-.socials li:not(:last-child), .foot-socials li:not(:last-child) {
+.socials__item:not(:last-child) {
   margin-right: 10px;
 }
-.socials a, .foot-socials a {
+.socials__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -285,12 +281,9 @@ nav {
   border-radius: 50px;
   fill: #afb1b8;
   background-color: #fff;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.socials a svg, .foot-socials a svg {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.socials a:hover, .foot-socials a:hover, .socials a:focus, .foot-socials a:focus {
+.socials__link:hover, .socials__link:focus {
   fill: #fff;
   background-color: #2196f3;
 }
@@ -298,7 +291,7 @@ nav {
 .companies {
   padding: 94px 0;
 }
-.companies-title {
+.companies__title {
   margin-bottom: 50px;
   color: #212121;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
@@ -307,19 +300,18 @@ nav {
   line-height: 1.17;
   text-align: center;
 }
-
-.companies-list {
+.companies__list {
   display: flex;
   justify-content: center;
 }
-.companies-list li {
+.companies__item {
   width: 170px;
   height: 92px;
 }
-.companies-list li:not(:last-child) {
+.companies__item:not(:last-child) {
   margin-right: 30px;
 }
-.companies-list a {
+.companies__link {
   display: flex;
   width: 100%;
   height: 100%;
@@ -329,40 +321,31 @@ nav {
   justify-content: center;
   fill: #afb1b8;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.companies-list a svg {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.companies-list a:hover, .companies-list a:focus {
+.companies__link:hover, .companies__link:focus {
   fill: #2196f3;
   border-color: #2196f3;
 }
 
-footer {
+.footer {
   padding: 60px 0;
   background-color: #2f303a;
 }
-footer > div {
+.footer > div {
   display: flex;
 }
-
-.foot-logo {
+.footer__logo {
   display: inline-block;
   margin-bottom: 20px;
 }
-
-.studio-white {
-  color: #fff;
-}
-
-.contacts li {
+.footer__item {
   margin-bottom: 9px;
 }
-.contacts li:last-child {
+.footer__item:last-child {
   margin-bottom: 0;
 }
-
-.contacts a {
+.footer__link {
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-size: 14px;
@@ -371,15 +354,18 @@ footer > div {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
 }
+.footer__link--white {
+  color: #fff;
+}
 
-#address {
+.logo__span--white {
   color: #fff;
 }
 
 .join {
   margin-left: 70px;
 }
-.join-title {
+.join__title {
   margin-bottom: 20px;
   color: #fff;
   font-weight: 700;
@@ -388,22 +374,12 @@ footer > div {
   letter-spacing: 0.03em;
 }
 
-.foot-socials a {
+.socials__link--white {
   fill: #fff;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.email-label {
-  display: block;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-#foot-email {
+.email-form__input {
   width: 358px;
   height: 50px;
   margin: 20px 12px 0 0;
@@ -414,22 +390,31 @@ footer > div {
   border-radius: 4px;
   background-color: #2f303a;
 }
-#foot-email::placeholder {
+.email-form__input::placeholder {
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
 }
 
-.foot-form {
+.email-form {
   margin-left: auto;
 }
-.foot-form .hero-button {
+.email-form__label {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.email-form__btn {
   display: inline;
   margin: 0;
-  fill: #fff;
 }
-.foot-form svg {
+.email-form__svg {
+  fill: #fff;
   vertical-align: middle;
   margin-left: 10px;
 }

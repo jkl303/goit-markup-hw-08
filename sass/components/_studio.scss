@@ -1,19 +1,17 @@
 .studio {
     padding-bottom: 94px;
-    &-list {
+    &__list {
     display: flex;
     margin-top: 50px;
 }
-    &-item {
+    &__item {
     position: relative;
     height: 294px;
         &:not(:last-child) {
         margin-right: $typical-margin;
 }
 }
-}
-
-.cover-text {
+    &__cover-text {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -25,4 +23,5 @@
     text-transform: uppercase;
     color: map-get($colors, 'another-text');
     background-color: rgba(47, 48, 58, 0.8);
+}
 }

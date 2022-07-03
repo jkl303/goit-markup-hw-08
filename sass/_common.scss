@@ -40,6 +40,23 @@ ul {
     text-align: center;
     letter-spacing: 0.03em;
 }
+
+.big-btn {min-width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    font-family: $primary-font-family;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: map-get($colors, 'another-text');
+    background-color: map-get($colors, 'hover');
+    &:hover,
+    &:focus {
+    cursor: pointer;
+    }}
+
 .visually-hidden {
     position: absolute;
     width: 1px;

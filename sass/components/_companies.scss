@@ -1,6 +1,6 @@
 .companies {
     padding: 94px 0;
-    &-title {
+    &__title {
     margin-bottom: 50px;
     color: map-get($colors, 'titles');
     font-family: $primary-font-family;
@@ -9,19 +9,18 @@
     line-height: 1.17;
     text-align: center;
 }
-}
-
-.companies-list {
+    &__list {
     display: flex;
     justify-content: center;
-    & li {
+}
+    &__item {
     width: 170px;
     height: 92px;
         &:not(:last-child) {
         margin-right: $typical-margin;
 }
 }
-    & a {
+    &__link {
     display: flex;
     width: 100%;
     height: 100%;
@@ -31,11 +30,9 @@
     justify-content: center;
     fill: map-get($colors, 'svg');
     @include transition;
-        & svg {@include transition(fill);}
+        transition: fill 250ms $cubic, border-color 250ms $cubic;
         &:hover,
         &:focus {
         fill: map-get($colors, 'hover');
         border-color: map-get($colors, 'hover');}
-}
-}
-
+}}

@@ -1,35 +1,33 @@
 .benefits {
     letter-spacing: 0.03em;
     padding: 94px 0;
-    &-list {
+    &__list {
     display: flex;
 }
-    &-item {
+    &__item {
     flex-basis: 270px;
-        & div {
-        display: flex;
-        height: 120px;
-        margin-bottom: 30px;
-        align-items: center;
-        justify-content: center;
-        background-color: #f5f4fa;
-}
     &:not(:last-child) {
     margin-right: $typical-margin;
 }
 }
-    &-list {
-        & h3 {
-        margin-bottom: 10px;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.14;
-        text-transform: uppercase;
+    &__div {
+    display: flex;
+    height: 120px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f4fa;
 }
-        & p {
-        font-size: 14px;
-        line-height: 1.71;
-        color: map-get($colors, 'text');
+    &__title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
 }
+    &__text {
+    font-size: 14px;
+    line-height: 1.71;
+    color: map-get($colors, 'text');
 }
 }

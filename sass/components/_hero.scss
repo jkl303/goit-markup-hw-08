@@ -3,23 +3,52 @@
     max-width: 1600px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url(../images/hero.jpg);
+        url(../images/hero-mobile.jpg);
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: #2f303a;
-    padding: 200px 0;
+    padding: 118px 0;
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)), url(../images/hero-mobile@2x.jpg);
+        }
+    @include tablet {background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(../images/hero-tablet.jpg);
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)), url(../images/hero-tablet@2x.jpg);}}
+    @include desktop {padding: 200px 0;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/hero-desktop.jpg);
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)), url(../images/hero-desktop@2x.jpg);
+            }
+    }
     &__title {
-    width: 696px;
+    max-width: 360px;
     margin: 0 auto 30px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: map-get($colors, 'another-text');}
+    color: map-get($colors, 'another-text');
+    @include desktop {max-width: 696px;
+    font-size: 44px;
+        line-height: 1.36;}}
     &__btn {
     display: block;
     margin: 0 auto;
 }
-    }
+}

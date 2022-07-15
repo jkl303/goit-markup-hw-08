@@ -1,0 +1,19 @@
+@mixin transition($property: border-color) {
+    transition: $property 250ms $cubic;
+}
+
+@mixin item-width($margins, $amount) {
+    width: calc((100% - 30px * $margins) / $amount);
+}
+
+@mixin tablet {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}

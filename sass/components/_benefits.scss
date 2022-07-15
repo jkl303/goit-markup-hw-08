@@ -1,14 +1,16 @@
 .benefits {
     letter-spacing: 0.03em;
-    padding: 94px 0;
+    padding: 60px 0;
     &__list {
     display: flex;
+    flex-wrap: wrap;
+    gap: $typical-margin;
+    @include desktop {padding: 94px 0;}
 }
     &__item {
-    flex-basis: 270px;
-    &:not(:last-child) {
-    margin-right: $typical-margin;
-}
+    width: 100%;
+    @include tablet {width: calc((100% - 30px) / 2);}
+    @include desktop {width: calc((100% - 90px) / 4);}
 }
     &__div {
     display: flex;
@@ -18,12 +20,15 @@
     justify-content: center;
     background-color: #f5f4fa;
 }
-    &__title {
+    &__title {text-align: center;
     margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+    @include tablet {
+        text-align: left;
+    }
 }
     &__text {
     font-size: 14px;

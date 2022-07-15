@@ -1,6 +1,10 @@
 .works {
     display: flex;
     flex-wrap: wrap;
+    gap: $typical-margin;
+    padding-bottom: 40px;
+    @include tablet {padding-bottom: 30px;}
+    @include desktop {padding-bottom: 50px;}
     &-titles {
     padding: 20px 24px;
     border: 1px solid #eeeeee;
@@ -21,15 +25,10 @@
 }
 
 .works-item {
-    margin-right: $typical-margin;
-    margin-bottom: $typical-margin;
-    @include transition(box-shadow);
-    &:nth-child(3n + 3) {
-    margin-right: 0;
-}
-    &:nth-last-child(-n + 3) {
-    margin-bottom: 0;
-}
+    width: 100%;
+    max-width: 450px;
+    @include tablet {width: $tablet-width;}
+    @include desktop {@include item-width(2, 3)}
     &:hover,
     &:focus {
     cursor: pointer;
@@ -49,13 +48,17 @@
 .riding-text {
     position: absolute;
     width: 100%;
-    padding: 63px 24px;
+    height: 100%;
+    padding: 77px 24px 77px;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.56;
     letter-spacing: 0.03em;
     color: map-get($colors, 'another-text');
     background-color: rgba(33, 150, 243, 0.9);
+    overflow: auto;
     @include transition(transform);
+    @include tablet {padding: 49px 24px 77px;}
+    @include desktop {padding: 63px 24px;}
 }
 

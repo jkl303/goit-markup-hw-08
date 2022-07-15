@@ -4,28 +4,107 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-}
-
-.container--flex {
-    display: flex;
-    justify-content: space-between;
-}
-
-.nav {
-    display: flex;
-    margin: 0;
     &__logo {
-    padding: 24px 0;
-    margin-right: 93px;
-    color: map-get($colors, 'hover');
+    padding: 16px 0;
+    color: map-get($colors, 'hover'); 
+        @include tablet {margin-right: 88px;
+        padding: 26px 0;}
+        @include desktop {margin-right: 93px;
+        padding: 24px 0;}
+        }
+}
+
+.logo__span--black {
+    color: map-get($colors, 'titles');
+}
+
+.menu-btn {position: absolute;
+top: 10px;
+right: 15px;
+border: none;
+background-color: #fff;
+fill: map-get($colors, 'titles');
+    @include transition(fill);
+    &:hover, &:focus {fill: map-get($colors,
+    'hover');}
+    @include tablet {
+        display: none;
+    }
+    &:hover, &:focus {fill: map-get($colors, 'hover');}}
+
+.mob-menu {position: fixed;
+width: 100vw;
+height: 100vh;
+top: 0;
+overflow: auto;
+background-color: #fff;
+padding: 48px 40px;
+    &__item:not(:last-child) {margin-bottom: 32px;}
+    &__link {text-decoration: none;
+    font-size: 40px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+    color: map-get($colors, 'titles');
+    &:hover,
+    &:focus  {color: map-get($colors, 'hover');}}}
+
+.mob-mail-tel {margin: 306px 0 64px;
+    &__item:not(:last-child) {
+    margin-bottom: 32px;
+    }
+    &__tel {text-decoration: none;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: map-get($colors,
+        'hover')}
+    &__mail {text-decoration: none;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: map-get($colors, 'text');}}
+
+.mob-socials {display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+&__link {text-decoration: none;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: map-get($colors, 'hover');}}
+
+.header__container--flex {display: flex;}
+
+.nav { 
+    @media screen and (max-width: 767px) {
+    display: none;
 }
     &__list {
     display: flex;
-    align-items: center;
 }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+        &--current {
+            position: relative;
+            color: map-get($colors, 'hover');
+        
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                width: 100%;
+                height: 4px;
+                background: #2196f3;
+                border-radius: 2px;
+            }
+        }
+    }
     &__link {
     display: block;
-    padding: 32px 0 31px;
+    padding: 32px 0;
     text-decoration: none;
     color: inherit;
     @include transition(color);
@@ -36,38 +115,41 @@
 }
 }
 
-.logo__span--black {
-    color: map-get($colors, 'titles');
+.mail-tel {display: flex;
+    margin-left: auto;
+    flex-direction: column;
+    padding: 16px 0;
+    @include desktop {flex-direction: row;
+    padding: 0;
+gap: 30px;
 }
-
-.mail-tel {@extend .nav__list;
-    &__link { @extend .nav__link;
-    color: map-get($colors, 'text');
-    fill: map-get($colors, 'text');
+    @media screen and (max-width: 767px) {
+            display: none;
+        }
+    &__link {display: block;
+        padding: 5px 0;
+        text-decoration: none;
+        color: map-get($colors , 'text');
+        font-size: 12px;
+        line-height: calc(14 / 12);
+        letter-spacing: 0.02em;
+        fill: map-get($colors, 'text');
+        @include transition(color);
+            &:hover,
+            &:focus {
+                color: map-get($colors, 'hover');
+                fill: map-get($colors, 'hover');
+            }
+    @include desktop {
+        padding: 32px 0 31px;
+        font-size: 14px;
+        line-height: calc(16 / 14);
+    }
     }
     &__svg {vertical-align: top;
         margin-right: 6px;
         @include transition(fill);
+        @include desktop {width: 16px;
+        height: 16px;}
     }
-}
-
-.nav__item, .mail-tel__item {
-&:not(:last-child) {
-    margin-right: 50px;
-}
-}
-
-.nav__item--current {
-    position: relative;
-    color: map-get($colors, 'hover');
-    &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 100%;
-    height: 4px;
-    background: #2196f3;
-    border-radius: 2px;
-}
 }

@@ -1,15 +1,15 @@
 .studio {
+    display: none;
     padding-bottom: 94px;
+    @include desktop {display: block;}
     &__list {
     display: flex;
     margin-top: 50px;
+    gap: $typical-margin;
 }
     &__item {
     position: relative;
     height: 294px;
-        &:not(:last-child) {
-        margin-right: $typical-margin;
-}
 }
     &__cover-text {
     position: absolute;

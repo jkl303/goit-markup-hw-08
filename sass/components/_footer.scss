@@ -1,18 +1,19 @@
-.footer {
+.footer {text-align: center;
     padding: 60px 0;
     background-color: #2f303a;
-    &>div {
-    display: flex;
-}
-    &__logo {
-    display: inline-block;
+    @include tablet {padding: 60px 89px 60px 76px;}
+    @include desktop {padding: 60px 0;
+    text-align: left;}
+    &__logo-adress {
+    margin: 0 auto;
+    @include tablet {margin: 0;}
+    }
+    &__logo {display: block;
     margin-bottom: 20px;
 }
-    &__item {
-    margin-bottom: 9px;
-    &:last-child {
-    margin-bottom: 0;
-}
+    &__item:not(:last-child) {
+    margin-bottom: 8px;
+    @include desktop {margin-bottom: 9px;}
 }
     &__link {
     font-family: $primary-font-family;
@@ -27,13 +28,25 @@
 }
 }
 }
+.container--flex {display: flex;
+flex-wrap: wrap;
+gap: 60px;
+    @include tablet {gap:none; 
+    justify-content: space-between;
+    }
+}
 
 .logo__span--white {
     color: map-get($colors, 'another-text');
 }
 
-.join {
-    margin-left: 70px;
+.join {width: 100%;
+    @include tablet {width: auto;
+    padding-top: 5px;
+}
+    @include desktop {
+    padding-top: 12px;
+    }
     &__title {
     margin-bottom: 20px;
     color: map-get($colors, 'another-text');
@@ -48,28 +61,16 @@
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.email-form__input {
-    width: 358px;
-    height: 50px;
-    margin: 20px 12px 0 0;
-    padding-left: 16px;
-    color: map-get($colors, 'another-text');
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    background-color: #2f303a;
-    &::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-}
-}
-
 .email-form {
+    width: 100%;
+    @include desktop {
+    width: auto;
     margin-left: auto;
-    &__label {
-    display: block;
+    padding-top: 12px;
+            
+    }
+    &__label {display: block;
+    margin: 0 auto;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -77,9 +78,32 @@
     text-transform: uppercase;
     color: map-get($colors, 'another-text');
     }
+    &__input {
+    width: 100%;
+    max-width: 450px;
+    height: 50px;
+    margin: 20px 0;
+    padding-left: 16px;
+    color: map-get($colors, 'another-text');
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: #2f303a;
+        @include desktop {
+        width: 358px;
+        margin: 20px 12px 0 0;}
+    &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+}
+}
     &__btn {
-    display: inline;
-    margin: 0;
+    display: block;
+    margin: 0 auto;
+        @include desktop {
+        display: inline;}
     }
     &__svg {fill: map-get($colors, 'another-text');
     vertical-align: middle;

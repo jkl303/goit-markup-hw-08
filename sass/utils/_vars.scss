@@ -3,6 +3,7 @@ $primary-font-family: 'Roboto',
 sans-serif;
 $typical-margin: 30px;
 $cubic:  cubic-bezier(0.4, 0, 0.2, 1);
+$tablet-width: calc((100% - 30px) / 2);
 
 $colors: (
 'titles': #212121,
@@ -11,7 +12,3 @@ $colors: (
 'svg': #afb1b8,
 'hover': #2196f3,
 );
-
-@mixin transition($property:border-color) {
-transition: $property 250ms $cubic;
-}

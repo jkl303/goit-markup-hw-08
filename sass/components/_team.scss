@@ -1,23 +1,32 @@
 .team {
-    padding: 94px 0;
+    padding: 60px 0;
     background-color: #f5f4fa;
+    @include desktop {
+        padding: 94px 0;
+    }
     &__list {
     display: flex;
-    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: $typical-margin;
+    margin-top: 30px;
+    @include desktop {
+            margin-top: 50px;
+        }
 }
     &__item {
+    width: 100%;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
+    0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     background-color: map-get($colors, 'another-text');
-        &:not(:last-child) {
-    margin-right: $typical-margin;
-}
+    @include tablet {width: $tablet-width;}
+    @include desktop {@include item-width(3,4)}
 }
     &__div {
-    padding: 30px 0;
+    padding: 24px 0;
     text-align: center;
     letter-spacing: 0.03em;
+    @include desktop {padding: 30px 0;}
 }
     &__title {
     font-size: 16px;
@@ -28,17 +37,15 @@
     &__text {
     font-size: 16px;
     line-height: 1.19;
+    font-weight: 400;
     color: map-get($colors, 'text');
     margin-bottom: 16px;
 }
 }
-
 .socials {
     display: flex;
     justify-content: center;
-    &__item:not(:last-child) {
-    margin-right: 10px;
-}
+    gap: 10px;
     &__link {
     display: flex;
     align-items: center;

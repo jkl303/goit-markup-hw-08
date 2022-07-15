@@ -12,20 +12,20 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Портфолио</title>
   </head>
   <body>
     <header class="header">
-      <div class="container container--flex">
+      <div class="container header__container--flex">
+        <a href="./index.html" lang="en" class="logo header__logo">Web<span class="logo__span--black">Studio</span></a>
         <nav class="nav">
-          <a href="./index.html" lang="en" class="logo nav__logo">Web<span class="logo__span--black">Studio</span></a>
           <ul class="nav__list">
-            <li class="nav__item
-            ">
+            <li class="nav__item">
               <a href="./index.html" class="nav__link">Студия</a>
             </li>
-            <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link nav__item--current">Портфолио</a>
+            <li class="nav__item nav__item--current">
+              <a href="./portfolio.html" class="nav__link">Портфолио</a>
             </li>
             <li class="nav__item">
               <a href="#contacts" class="nav__link">Контакты</a>
@@ -35,50 +35,90 @@
         <ul class="mail-tel">
           <li class="mail-tel__item">
             <a href="mailto:info@devstudio.com" class="mail-tel__link">
-              <svg width="16" height="16" class="mail-tel__svg">
+              <svg width="14" height="10" class="mail-tel__svg">
                 <use href="./images/icons.svg#envelope"></use>
               </svg>
               info@devstudio.com</a>
           </li>
           <li class="mail-tel__item">
-            <a href="tel:+380961111111" class="mail-tel__link"><svg width="10" height="16" class="mail-tel__svg">
+            <a href="tel:+380961111111" class="mail-tel__link"><svg width="10" height="14" class="mail-tel__svg">
                 <use href="./images/icons.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11</a>
           </li>
         </ul>
       </div>
+      <button type="button" class="menu-btn menu-btn--open"><svg width="40" height="40">
+          <use href="./images/icons.svg#menu"></use>
+        </svg></button>
+      <div class="mob-menu is-hidden">
+        <div class="container">
+          <button type="button" class="menu-btn menu-btn--close"><svg width="40" height="40">
+              <use href="./images/icons.svg#close-menu"></use>
+            </svg></button>
+          <ul class="mob-menu__list">
+            <li class="mob-menu__item">
+              <a href="./index.html" class="mob-menu__link">Студия</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="./portfolio.html" class="mob-menu__link">Портфолио</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="#contacts" class="mob-menu__link">Контакты</a>
+            </li>
+          </ul>
+          <ul class="mob-mail-tel">
+            <li class="mob-mail-tel__item">
+              <a href="tel:+380961111111" class="mob-mail-tel__tel">
+                +38 096 111 11 11</a>
+            </li>
+            <li class="mob-mail-tel__item">
+              <a href="mailto:info@devstudio.com" class="mob-mail-tel__mail">
+                info@devstudio.com</a>
+            </li>
+          </ul>
+          <ul class="mob-socials">
+            <li class="mob-socials__item"><a href="" class="mob-socials__link">Instagram</a></li>
+            <li class="mob-socials__item"><a href="" class="mob-socials__link">Twitter</a></li>
+            <li class="mob-socials__item"><a href="" class="mob-socials__link">Facebook</a></li>
+            <li class="mob-socials__item"><a href="" class="mob-socials__link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
     </header>
     <main>
       <section class="portfolio">
         <div class="container">
           <h1 class="visually-hidden">Портфолио</h1>
-          <ul class="buttons">
-            <li class="button">
-              <button id="current-button" type="button">Все</button>
+          <ul class="btns">
+            <li>
+              <button type="button" class="btns__btn btns__btn--current">Все</button>
             </li>
-            <li class="button">
-              <button type="button">Веб-сайты</button>
+            <li>
+              <button type="button" class="btns__btn">Веб-сайты</button>
             </li>
-            <li class="button">
-              <button type="button">Приложения</button>
+            <li>
+              <button type="button" class="btns__btn">Приложения</button>
             </li>
-            <li class="button">
-              <button type="button">Дизайн</button>
+            <li>
+              <button type="button" class="btns__btn">Дизайн</button>
             </li>
-            <li class="button">
-              <button type="button">Маркетинг</button>
+            <li>
+              <button type="button" class="btns__btn">Маркетинг</button>
             </li>
           </ul>
           <ul class="works">
             <li class="works-item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/img-1.jpg"
+                <picture>
+                  <source srcset="./images/portfolio/img-1-mobile.jpg 1x, ./images/portfolio/img-1-mobile@2x.jpg 2x" media="(max-width: 767px)" />
+                  <source srcset="./images/portfolio/img-1-tablet.jpg 1x, ./images/portfolio/img-1-tablet@2x.jpg 2x" media="(max-width: 1199px)" />
+                  <source srcset="./images/portfolio/img-1-desktop.jpg 1x, ./images/portfolio/img-1-desktop@2x.jpg 2x" />
+                  <img
+                  src="./images/portfolio/img-1-mobile.jpg"
                   alt="Макбук"
-                  width="370"
-                  height="294"
                 />
+                </picture>
                 <p class="riding-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -92,12 +132,14 @@
             </li>
             <li class="works-item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/img-2.jpg"
-                  alt="Баскетбол"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source srcset="./images/portfolio/img-2-mobile.jpg 1x, ./images/portfolio/img-2-mobile@2x.jpg 2x"
+                    media="(max-width: 767px)" />
+                  <source srcset="./images/portfolio/img-2-tablet.jpg 1x, ./images/portfolio/img-2-tablet@2x.jpg 2x"
+                    media="(max-width: 1199px)" />
+                  <source srcset="./images/portfolio/img-2-desktop.jpg 1x, ./images/portfolio/img-2-desktop@2x.jpg 2x" />
+                  <img src="./images/portfolio/img-2-mobile.jpg" alt="Баскетбол"/>
+                </picture>
                 <p class="riding-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -111,12 +153,14 @@
             </li>
             <li class="works-item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/img-3.jpg"
-                  alt="Лого ресторана"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source srcset="./images/portfolio/img-3-mobile.jpg 1x, ./images/portfolio/img-3-mobile@2x.jpg 2x"
+                    media="(max-width: 767px)" />
+                  <source srcset="./images/portfolio/img-3-tablet.jpg 1x, ./images/portfolio/img-3-tablet@2x.jpg 2x"
+                    media="(max-width: 1199px)" />
+                  <source srcset="./images/portfolio/img-3-desktop.jpg 1x, ./images/portfolio/img-3-desktop@2x.jpg 2x" />
+                  <img src="./images/portfolio/img-3-mobile.jpg" alt="Лого ресторана"/>
+                </picture>
                 <p class="riding-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -130,12 +174,14 @@
             </li>
             <li class="works-item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/img-4.jpg"
-                  alt="Наушники"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source srcset="./images/portfolio/img-4-mobile.jpg 1x, ./images/portfolio/img-4-mobile@2x.jpg 2x"
+                    media="(max-width: 767px)" />
+                  <source srcset="./images/portfolio/img-4-tablet.jpg 1x, ./images/portfolio/img-4-tablet@2x.jpg 2x"
+                    media="(max-width: 1199px)" />
+                  <source srcset="./images/portfolio/img-4-desktop.jpg 1x, ./images/portfolio/img-4-desktop@2x.jpg 2x" />
+                  <img src="./images/portfolio/img-4-mobile.jpg" alt="Наушники"/>
+                </picture>
                 <p class="riding-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -149,12 +195,14 @@
             </li>
             <li class="works-item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/img-5.jpg"
-                  alt="Коробки"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source srcset="./images/portfolio/img-5-mobile.jpg 1x, ./images/portfolio/img-5-mobile@2x.jpg 2x"
+                    media="(max-width: 767px)" />
+                  <source srcset="./images/portfolio/img-5-tablet.jpg 1x, ./images/portfolio/img-5-tablet@2x.jpg 2x"
+                    media="(max-width: 1199px)" />
+                  <source srcset="./images/portfolio/img-5-desktop.jpg 1x, ./images/portfolio/img-5-desktop@2x.jpg 2x" />
+                  <img src="./images/portfolio/img-5-mobile.jpg" alt="Коробки"/>
+                </picture>
                 <p class="riding-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -168,12 +216,14 @@
             </li>
             <li class="works-item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/img-6.jpg"
-                  alt="Монитор"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source srcset="./images/portfolio/img-6-mobile.jpg 1x, ./images/portfolio/img-6-mobile@2x.jpg 2x"
+                    media="(max-width: 767px)" />
+                  <source srcset="./images/portfolio/img-6-tablet.jpg 1x, ./images/portfolio/img-6-tablet@2x.jpg 2x"
+                    media="(max-width: 1199px)" />
+                  <source srcset="./images/portfolio/img-6-desktop.jpg 1x, ./images/portfolio/img-6-desktop@2x.jpg 2x" />
+                  <img src="./images/portfolio/img-6-mobile.jpg" alt="Монитор"/>
+                </picture>
                 <p class="riding-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -187,12 +237,14 @@
             </li>
             <li class="works-item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/img-7.jpg"
-                  alt="Книга"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source srcset="./images/portfolio/img-7-mobile.jpg 1x, ./images/portfolio/img-7-mobile@2x.jpg 2x"
+                    media="(max-width: 767px)" />
+                  <source srcset="./images/portfolio/img-7-tablet.jpg 1x, ./images/portfolio/img-7-tablet@2x.jpg 2x"
+                    media="(max-width: 1199px)" />
+                  <source srcset="./images/portfolio/img-7-desktop.jpg 1x, ./images/portfolio/img-7-desktop@2x.jpg 2x" />
+                  <img src="./images/portfolio/img-7-mobile.jpg" alt="Книга"/>
+                </picture>
                 <p class="riding-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -206,12 +258,14 @@
             </li>
             <li class="works-item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/img-8.jpg"
-                  alt="Бирка"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source srcset="./images/portfolio/img-8-mobile.jpg 1x, ./images/portfolio/img-8-mobile@2x.jpg 2x"
+                    media="(max-width: 767px)" />
+                  <source srcset="./images/portfolio/img-8-tablet.jpg 1x, ./images/portfolio/img-8-tablet@2x.jpg 2x"
+                    media="(max-width: 1199px)" />
+                  <source srcset="./images/portfolio/img-8-desktop.jpg 1x, ./images/portfolio/img-8-desktop@2x.jpg 2x" />
+                  <img src="./images/portfolio/img-8-mobile.jpg" alt="Бирка"/>
+                </picture>
                 <p class="riding-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -225,12 +279,14 @@
             </li>
             <li class="works-item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/img-9.jpg"
-                  alt="Ноутбук"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source srcset="./images/portfolio/img-9-mobile.jpg 1x, ./images/portfolio/img-9-mobile@2x.jpg 2x"
+                    media="(max-width: 767px)" />
+                  <source srcset="./images/portfolio/img-9-tablet.jpg 1x, ./images/portfolio/img-9-tablet@2x.jpg 2x"
+                    media="(max-width: 1199px)" />
+                  <source srcset="./images/portfolio/img-9-desktop.jpg 1x, ./images/portfolio/img-9-desktop@2x.jpg 2x" />
+                  <img src="./images/portfolio/img-9-mobile.jpg" alt="Ноутбук"/>
+                </picture>
                 <p class="riding-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -247,8 +303,8 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="container">
-        <div>
+      <div class="container container--flex">
+        <div class="footer__logo-adress">
           <a href="./index.html" lang="en" class="logo footer__logo">Web<span class="logo__span--white">Studio</span></a>
           <address id="contacts">
             <ul>
@@ -309,5 +365,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -1,24 +1,35 @@
 .companies {
-    padding: 94px 0;
+    padding: 60px 0;
+    @include desktop {
+    padding: 94px 0; 
+    }
     &__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     color: map-get($colors, 'titles');
     font-family: $primary-font-family;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+    @include desktop {
+    margin-bottom: 50px;
+    }
 }
     &__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: $typical-margin;
 }
     &__item {
-    width: 170px;
+    width: $tablet-width;
     height: 92px;
-        &:not(:last-child) {
-        margin-right: $typical-margin;
-}
+    @include tablet {
+        @include item-width(2, 3)
+    }
+    @include desktop {
+        @include item-width(5, 6)
+    }
 }
     &__link {
     display: flex;
@@ -35,4 +46,5 @@
         &:focus {
         fill: map-get($colors, 'hover');
         border-color: map-get($colors, 'hover');}
-}}
+}
+}

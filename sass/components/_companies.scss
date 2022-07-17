@@ -5,12 +5,7 @@
     }
     &__title {
     margin-bottom: 30px;
-    color: map-get($colors, 'titles');
     font-family: $primary-font-family;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
     @include desktop {
     margin-bottom: 50px;
     }

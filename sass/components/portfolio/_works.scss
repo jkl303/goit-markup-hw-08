@@ -6,21 +6,21 @@
     @include tablet {padding-bottom: 30px;}
     @include desktop {padding-bottom: 50px;}
     &-titles {
-    padding: 20px 24px;
-    border: 1px solid #eeeeee;
+        padding: 20px 24px;
+        border: 1px solid #eeeeee;
 }
     & h2 {font-family: $primary-font-family;
-    margin-bottom: 4px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
+        margin-bottom: 4px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
 }
     &-p {
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.03em;
-    color: map-get($colors, 'text');
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.03em;
+        color: map-get($colors, 'text');
 }
 }
 
@@ -29,14 +29,11 @@
     max-width: 450px;
     @include tablet {width: $tablet-width;}
     @include desktop {@include item-width(2, 3)}
-    &:hover,
-    &:focus {
-    cursor: pointer;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-        & .riding-text {
-        transform: translateY(-100%);
-}
+    &:hover, &:focus {
+        cursor: pointer;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+        & .riding-text {transform: translateY(-100%);}
 }
 }
 

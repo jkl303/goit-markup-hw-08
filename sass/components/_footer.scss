@@ -1,12 +1,13 @@
 .footer {text-align: center;
     padding: 60px 0;
     background-color: #2f303a;
-    @include tablet {padding: 60px 89px 60px 76px;}
+    @include tablet {padding: 60px 0;}
     @include desktop {padding: 60px 0;
     text-align: left;}
     &__logo-adress {
     margin: 0 auto;
     @include tablet {margin: 0;}
+    @include desktop {margin-right: 26px;}
     }
     &__logo {display: block;
     margin-bottom: 20px;
@@ -31,9 +32,14 @@
 .container--flex {display: flex;
 flex-wrap: wrap;
 gap: 60px;
-    @include tablet {gap:none; 
-    justify-content: space-between;
+    @include tablet {justify-content: space-between;
+        padding-left: 76px;
+        padding-right: 89px;
     }
+    @include desktop {justify-content: flex-start;
+    padding-left: 15px;
+padding-right: 15px;
+}
 }
 
 .logo__span--white {
@@ -91,7 +97,7 @@ gap: 60px;
     background-color: #2f303a;
         @include desktop {
         width: 358px;
-        margin: 20px 12px 0 0;}
+        margin: 20px 8px 0 0;}
     &::placeholder {
     color: rgba(255, 255, 255, 0.6);
     font-size: 16px;

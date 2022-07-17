@@ -13,6 +13,11 @@
         padding: 24px 0;}
         }
 }
+.mob-flex {display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+height: 100%;}
+
 
 .logo__span--black {
     color: map-get($colors, 'titles');
@@ -31,7 +36,6 @@ fill: map-get($colors, 'titles');
         display: none;
     }
     &:hover, &:focus {fill: map-get($colors, 'hover');}}
-
 .mob-menu {position: fixed;
 width: 100vw;
 height: 100vh;
@@ -47,8 +51,8 @@ padding: 48px 40px;
     color: map-get($colors, 'titles');
     &:hover,
     &:focus  {color: map-get($colors, 'hover');}}}
-
-.mob-mail-tel {margin: 306px 0 64px;
+.mob-mail-tel {
+    margin-bottom: 64px;
     &__item:not(:last-child) {
     margin-bottom: 32px;
     }

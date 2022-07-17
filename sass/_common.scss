@@ -5,6 +5,7 @@ body {
 
 .container {
     width: 100%;
+    max-width: 480px;
     margin: 0 auto;
     padding: 0 15px;
     @include tablet {
@@ -46,11 +47,15 @@ img {
 }
 
 .section-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    letter-spacing: 0.03em;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.18;
+        text-align: center;
+        letter-spacing: 0.03em;
+        @include desktop {
+        font-size: 36px;
+        line-height: 1.16;
+        }
 }
 
 .big-btn {min-width: 200px;
